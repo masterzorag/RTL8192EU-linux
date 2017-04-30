@@ -24,6 +24,112 @@ Connected to e8:cc:18:48:76:30 (on wlan2)
         signal: -51 dBm
         tx bitrate: 130.0 MBit/s
 
+# iw wlan2 info
+Interface wlan2
+        ifindex 7
+        wdev 0x400000001
+        addr 18:d6:c7:18:7e:18
+        ssid ----
+        type managed
+        wiphy 4
+
+# iw phy4 info
+Wiphy phy4
+        max # scan SSIDs: 9
+        max scan IEs length: 2304 bytes
+        Retry short limit: 7
+        Retry long limit: 4
+        Coverage class: 0 (up to 0m)
+        Supported Ciphers:
+                * WEP40 (00-0f-ac:1)
+                * WEP104 (00-0f-ac:5)
+                * TKIP (00-0f-ac:2)
+                * CCMP (00-0f-ac:4)
+        Available Antennas: TX 0 RX 0
+        Supported interface modes:
+                 * IBSS
+                 * managed
+                 * AP
+                 * monitor
+                 * P2P-client
+                 * P2P-GO
+        Band 1:
+                Capabilities: 0x1862
+                        HT20/HT40
+                        Static SM Power Save
+                        RX HT20 SGI
+                        RX HT40 SGI
+                        No RX STBC
+                        Max AMSDU length: 7935 bytes
+                        DSSS/CCK HT40
+                Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+                Minimum RX AMPDU time spacing: 16 usec (0x07)
+                HT TX/RX MCS rate indexes supported: 0-15, 32
+                Bitrates (non-HT):
+                        * 1.0 Mbps
+                        * 2.0 Mbps
+                        * 5.5 Mbps
+                        * 11.0 Mbps
+                        * 6.0 Mbps
+                        * 9.0 Mbps
+                        * 12.0 Mbps
+                        * 18.0 Mbps
+                        * 24.0 Mbps
+                        * 36.0 Mbps
+                        * 48.0 Mbps
+                        * 54.0 Mbps
+                Frequencies:
+                        * 2412 MHz [1] (20.0 dBm)
+                        * 2417 MHz [2] (20.0 dBm)
+                        * 2422 MHz [3] (20.0 dBm)
+                        * 2427 MHz [4] (20.0 dBm)
+                        * 2432 MHz [5] (20.0 dBm)
+                        * 2437 MHz [6] (20.0 dBm)
+                        * 2442 MHz [7] (20.0 dBm)
+                        * 2447 MHz [8] (20.0 dBm)
+                        * 2452 MHz [9] (20.0 dBm)
+                        * 2457 MHz [10] (20.0 dBm)
+                        * 2462 MHz [11] (20.0 dBm)
+                        * 2467 MHz [12] (20.0 dBm)
+                        * 2472 MHz [13] (20.0 dBm)
+                        * 2484 MHz [14] (disabled)
+        Supported commands:
+                 * new_interface
+                 * set_interface
+                 * new_key
+                 * start_ap
+                 * new_station
+                 * set_bss
+                 * join_ibss
+                 * set_pmksa
+                 * del_pmksa
+                 * flush_pmksa
+                 * remain_on_channel
+                 * frame
+                 * set_channel
+                 * connect
+                 * disconnect
+        Supported TX frame types:
+                 * IBSS: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+                 * managed: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+                 * AP: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+                 * AP/VLAN: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+                 * P2P-client: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+                 * P2P-GO: 0x00 0x10 0x20 0x30 0x40 0x50 0x60 0x70 0x80 0x90 0xa0 0xb0 0xc0 0xd0 0xe0 0xf0
+        Supported RX frame types:
+                 * IBSS: 0xd0
+                 * managed: 0x40 0xd0
+                 * AP: 0x00 0x20 0x40 0xa0 0xb0 0xc0 0xd0
+                 * AP/VLAN: 0x00 0x20 0x40 0xa0 0xb0 0xc0 0xd0
+                 * P2P-client: 0x40 0xd0
+                 * P2P-GO: 0x00 0x20 0x40 0xa0 0xb0 0xc0 0xd0
+        WoWLAN support:
+                 * wake up on anything (device continues operating normally)
+        software interface modes (can always be added):
+                 * monitor
+        interface combinations are not supported
+        Device supports scan flush.
+
 ...
 [64433.047338] RTL871X: rtl8192eu v4.3.15_14701.20150715_BTCOEX20150615-41
 [64433.047341] RTL871X: rtl8192eu BT-Coex version = BTCOEX20150615-41
