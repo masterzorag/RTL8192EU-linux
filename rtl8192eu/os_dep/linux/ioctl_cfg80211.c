@@ -31,6 +31,17 @@
 #define STATION_INFO_ASSOC_REQ_IES	0
 #endif /* Linux kernel >= 4.0.0 */
 
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 7, 0))
+enum ieee80211_band {
+        IEEE80211_BAND_2GHZ = NL80211_BAND_2GHZ,
+        IEEE80211_BAND_5GHZ = NL80211_BAND_5GHZ,
+        IEEE80211_BAND_60GHZ = NL80211_BAND_60GHZ,
+
+        /* keep last */
+        IEEE80211_NUM_BANDS
+};
+#endif /* Linux kernel >= 4.7.0 */
+
 #include <rtw_wifi_regd.h>
 
 #define RTW_MAX_MGMT_TX_CNT (8)
