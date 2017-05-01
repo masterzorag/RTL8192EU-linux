@@ -25,6 +25,6 @@ alias:          usb:v0BDAp818Bd*dc*dsc*dp*icFFiscFFipFFin*
 depends:        cfg80211
 vermagic:       4.4.65 SMP mod_unload modversions
 ```
-* linux-4.4.65 is the longterm supported, no modifications needed  
+* [linux-4.4.y is the longterm supported](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.4.y), no modifications needed
 * stable-linux-4.7.10 compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
 [This commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1d76250bd34af86c6498fc51e50cab3bfbbeceaa) introduces [cfg80211_scan_info](http://lxr.free-electrons.com/ident?v=4.8;i=cfg80211_scan_info) and breaks compilation with linux >=4.8
