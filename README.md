@@ -2,7 +2,7 @@
 Realtek 8192EU Linux Driver
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-
+[![master](https://img.shields.io/badge/current-v4.4.1_rc1-aa11ff.svg)](https://github.com/masterzorag/RTL8192EU-linux/releases)
 
 Testing hardware dongle is [TP-Link TL-WN823N](http://www.tp-link.com/us/products/details/cat-5520_TL-WN823N.html)
 ```sh
@@ -26,5 +26,9 @@ depends:        cfg80211
 vermagic:       4.4.65 SMP mod_unload modversions
 ```
 * [linux-4.4.y is the longterm supported](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.4.y), no modifications needed
-* stable-linux-4.7.10 compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
-[This commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1d76250bd34af86c6498fc51e50cab3bfbbeceaa) introduces [cfg80211_scan_info](http://lxr.free-electrons.com/ident?v=4.8;i=cfg80211_scan_info) and breaks compilation with linux >=4.8
+* [stable-linux-4.7.10](http://news.softpedia.com/news/linux-kernel-4-7-10-is-the-last-in-the-series-users-need-to-move-to-linux-4-8-509555.shtml) compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
+[This commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1d76250bd34af86c6498fc51e50cab3bfbbeceaa) introduces [cfg80211_scan_info](http://lxr.free-electrons.com/ident?v=4.8;i=cfg80211_scan_info) and breaks compilation with linux >=4.8  
+
+* We add support to v4.4.1 Realtek driver to build on latest [linux-4.11](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.11)
+
+* Monitor mode is [supported](https://github.com/masterzorag/RTL8192EU-linux/blob/linux-4.11/Makefile#L65) and [working](https://github.com/CGarces/RTL8192EU-linux/issues/1#issuecomment-300720336)
