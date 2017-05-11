@@ -17,9 +17,9 @@ make install
 * import running config
 # zcat /proc/config.gz > .config
 # make silentoldconfig
-* don't build: just prepare
+* do not build: just prepare
 # make prepare
 
 * build Realtek driver, out-of-tree
-make KSRC=/Storage/linux-4.x
+# make KSRC=/Storage/linux-4.x
 ```
