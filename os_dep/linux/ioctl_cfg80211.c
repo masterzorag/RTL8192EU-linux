@@ -31,6 +31,17 @@
 #define STATION_INFO_ASSOC_REQ_IES	0
 #endif /* Linux kernel >= 4.0.0 */
 
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 7, 0))
+enum ieee80211_band {
+        IEEE80211_BAND_2GHZ = NL80211_BAND_2GHZ,
+        IEEE80211_BAND_5GHZ = NL80211_BAND_5GHZ,
+        IEEE80211_BAND_60GHZ = NL80211_BAND_60GHZ,
+
+        /* keep last */
+        IEEE80211_NUM_BANDS
+};
+#endif /* Linux kernel >= 4.7.0 */
+
 #include <rtw_wifi_regd.h>
 
 #define RTW_MAX_MGMT_TX_CNT (8)
@@ -2051,7 +2062,14 @@ void rtw_cfg80211_indicate_scan_done(_adapter *adapter, bool aborted)
 		}
 		else
 		{
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,8,0)
+			struct cfg80211_scan_info info = {
+				.aborted = aborted
+			};
+			cfg80211_scan_done(pwdev_priv->scan_request, &info);
+#else
 			cfg80211_scan_done(pwdev_priv->scan_request, aborted);
+#endif
 		}
 
 		pwdev_priv->scan_request = NULL;
@@ -3942,8 +3960,13 @@ static int rtw_cfg80211_add_monitor_if(_adapter *padapter, char *name, struct ne
 	mon_ndev->type = ARPHRD_IEEE80211_RADIOTAP;
 	strncpy(mon_ndev->name, name, IFNAMSIZ);
 	mon_ndev->name[IFNAMSIZ - 1] = 0;
+#if (LINUX_VERSION_CODE>=KERNEL_VERSION(4,11,9))
+	mon_ndev->needs_free_netdev = true;
+	mon_ndev->priv_destructor = rtw_ndev_destructor;
+#else
 	mon_ndev->destructor = rtw_ndev_destructor;
-	
+#endif
+
 #if (LINUX_VERSION_CODE>=KERNEL_VERSION(2,6,29))
 	mon_ndev->netdev_ops = &rtw_cfg80211_monitor_if_ops;
 #else
