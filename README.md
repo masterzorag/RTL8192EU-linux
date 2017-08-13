@@ -29,6 +29,8 @@ vermagic:       4.11.2 SMP mod_unload modversions
 * [stable-linux-4.7.10](http://news.softpedia.com/news/linux-kernel-4-7-10-is-the-last-in-the-series-users-need-to-move-to-linux-4-8-509555.shtml) compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
 [This commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1d76250bd34af86c6498fc51e50cab3bfbbeceaa) introduces [cfg80211_scan_info](http://lxr.free-electrons.com/ident?v=4.8;i=cfg80211_scan_info) and breaks compilation with linux >=4.8  
 
-* We add support to v4.4.1 Realtek driver to build on latest [linux-4.11.y](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.11.y)
+* We have added support to v4.4.1 Realtek driver to build on latest [linux-4.11.y](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.11.y)
 
 * Monitor mode is [supported](https://github.com/masterzorag/RTL8192EU-linux/blob/linux-4.11/Makefile#L65) and [working](https://github.com/CGarces/RTL8192EU-linux/issues/1#issuecomment-300720336)
+
+* We add support for support to v4.4.1 Realtek driver to build on latest [linux-4.12.y](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.12.y), checkout [related branch](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.12.y) 
