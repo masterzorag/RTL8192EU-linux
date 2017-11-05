@@ -1,6 +1,19 @@
 # RTL8192EU-linux
 Realtek 8192EU Linux Driver
 
+How to build:
+
+```
+  $ sodo su
+  # make clean
+  # make
+  # modprobe lib80211
+  # modprobe cfg80211
+  # insmod 8192eu.ko
+  # cp 8192eu.ko /lib/modules/`uname -r`/kernel/drivers/net/wireless
+  # depmod -a
+```
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![master](https://img.shields.io/badge/current-v4.4.1_rc1-aa11ff.svg)](https://github.com/masterzorag/RTL8192EU-linux/releases)
 
