@@ -21,9 +21,9 @@ alias:          usb:v0BDAp818Bd*dc*dsc*dp*icFFiscFFipFFin*
 alias:          usb:v2357p0109d*dc*dsc*dp*ic*isc*ip*in*
 alias:          usb:v2357p0108d*dc*dsc*dp*ic*isc*ip*in*
 alias:          usb:v2357p0107d*dc*dsc*dp*ic*isc*ip*in*
-depends:        cfg80211
+depends:
 name:           8192eu
-vermagic:       4.13.15 SMP mod_unload modversions
+vermagic:       4.14.7 SMP mod_unload modversions
 ```
 * [linux-4.4.y is the longterm supported](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.4.y), no modifications needed
 * [stable-linux-4.7.10](http://news.softpedia.com/news/linux-kernel-4-7-10-is-the-last-in-the-series-users-need-to-move-to-linux-4-8-509555.shtml) compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
