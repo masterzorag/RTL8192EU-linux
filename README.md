@@ -10,20 +10,20 @@ Testing hardware dongle is [TP-Link TL-WN823N](http://www.tp-link.com/us/product
 Bus 001 Device 003: ID 2357:0109
 ```
 ```sh
-# modinfo 8192eu
-filename:       /lib/modules/4.11.2/kernel/drivers/net/wireless/8192eu.ko
-version:        v4.4.1_17696.20160509_BTCOEX20160412-0042
+# modinfo ./8192eu.ko
+version:        rtl8192EU_WiFi_linux_v5.2.7_22739.20170615_COEX20170113-0046
 author:         Realtek Semiconductor Corp.
 description:    Realtek Wireless Lan Driver
 license:        GPL
-srcversion:     70FC1BC9480AB71C03638FD
+srcversion:     6ABF665BDB6E3584BC8F80F
+alias:          usb:v0BDAp818Cd*dc*dsc*dp*icFFiscFFipFFin*
+alias:          usb:v0BDAp818Bd*dc*dsc*dp*icFFiscFFipFFin*
 alias:          usb:v2357p0109d*dc*dsc*dp*ic*isc*ip*in*
 alias:          usb:v2357p0108d*dc*dsc*dp*ic*isc*ip*in*
 alias:          usb:v2357p0107d*dc*dsc*dp*ic*isc*ip*in*
-alias:          usb:v0BDAp818Cd*dc*dsc*dp*icFFiscFFipFFin*
-alias:          usb:v0BDAp818Bd*dc*dsc*dp*icFFiscFFipFFin*
 depends:        cfg80211
-vermagic:       4.11.2 SMP mod_unload modversions
+name:           8192eu
+vermagic:       4.13.15 SMP mod_unload modversions
 ```
 * [linux-4.4.y is the longterm supported](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.4.y), no modifications needed
 * [stable-linux-4.7.10](http://news.softpedia.com/news/linux-kernel-4-7-10-is-the-last-in-the-series-users-need-to-move-to-linux-4-8-509555.shtml) compiles fine, with little [patching](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.7) :syringe:  
@@ -34,3 +34,5 @@ vermagic:       4.11.2 SMP mod_unload modversions
 * Monitor mode is [supported](https://github.com/masterzorag/RTL8192EU-linux/blob/linux-4.11/Makefile#L65) and [working](https://github.com/CGarces/RTL8192EU-linux/issues/1#issuecomment-300720336)
 
 * We add support for support to v4.4.1 Realtek driver to build on latest [linux-4.12.y](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/?h=linux-4.12.y), checkout [related branch](https://github.com/masterzorag/RTL8192EU-linux/tree/linux-4.12.y) 
+
+* This branch is restared from Realtek v5.2.7 tarball
